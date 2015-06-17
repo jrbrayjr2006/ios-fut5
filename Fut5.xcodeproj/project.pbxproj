@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B75FD6A61B2692E50085129A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75FD6A51B2692E50085129A /* RegistrationViewController.swift */; };
+		B7AACAFE1B2A6E09005585B4 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */; };
+		B7DDFBC81B2682FB00E168A9 /* login_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DDFBC71B2682FB00E168A9 /* login_logo.png */; };
+		B7DDFBCA1B26872800E168A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDFBC91B26872800E168A9 /* LoginViewController.swift */; };
+		B7E16E771B30E43400717CCD /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E16E6F1B30E43400717CCD /* MMDrawerBarButtonItem.m */; };
+		B7E16E781B30E43400717CCD /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E16E711B30E43400717CCD /* MMDrawerController.m */; };
+		B7E16E791B30E43400717CCD /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E16E741B30E43400717CCD /* MMDrawerVisualState.m */; };
+		B7E16E7A1B30E43400717CCD /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E16E761B30E43400717CCD /* UIViewController+MMDrawerController.m */; };
+		B7E16E7C1B30E5A900717CCD /* LeftDrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E16E7B1B30E5A900717CCD /* LeftDrawerViewController.swift */; };
+		B7E16E811B30E7D500717CCD /* SideMenu__0008_Shape-434.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E16E7D1B30E7D500717CCD /* SideMenu__0008_Shape-434.png */; };
+		B7E16E821B30E7D500717CCD /* SideMenu__0009_Shape-15.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E16E7E1B30E7D500717CCD /* SideMenu__0009_Shape-15.png */; };
+		B7E16E831B30E7D500717CCD /* SideMenu__0010_Shape-101.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E16E7F1B30E7D500717CCD /* SideMenu__0010_Shape-101.png */; };
+		B7E16E841B30E7D500717CCD /* SideMenu__0011_Shape-137.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E16E801B30E7D500717CCD /* SideMenu__0011_Shape-137.png */; };
 		B7E56CE41B26754500DBE055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E56CE31B26754500DBE055 /* AppDelegate.swift */; };
 		B7E56CE61B26754500DBE055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E56CE51B26754500DBE055 /* ViewController.swift */; };
 		B7E56CE91B26754500DBE055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E56CE71B26754500DBE055 /* Main.storyboard */; };
 		B7E56CEB1B26754500DBE055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E56CEA1B26754500DBE055 /* Images.xcassets */; };
 		B7E56CEE1B26754500DBE055 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E56CEC1B26754500DBE055 /* LaunchScreen.xib */; };
 		B7E56CFA1B26754600DBE055 /* Fut5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E56CF91B26754600DBE055 /* Fut5Tests.swift */; };
+		B7E56D051B2675E300DBE055 /* background_ios.png in Resources */ = {isa = PBXBuildFile; fileRef = B7E56D041B2675E200DBE055 /* background_ios.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +40,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B75FD6A51B2692E50085129A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
+		B7DDFBC71B2682FB00E168A9 /* login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo.png; sourceTree = "<group>"; };
+		B7DDFBC91B26872800E168A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B7E16E6D1B30E43300717CCD /* Fut5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fut5-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7E16E6E1B30E43400717CCD /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		B7E16E6F1B30E43400717CCD /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		B7E16E701B30E43400717CCD /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		B7E16E711B30E43400717CCD /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		B7E16E721B30E43400717CCD /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		B7E16E731B30E43400717CCD /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		B7E16E741B30E43400717CCD /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		B7E16E751B30E43400717CCD /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		B7E16E761B30E43400717CCD /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		B7E16E7B1B30E5A900717CCD /* LeftDrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftDrawerViewController.swift; sourceTree = "<group>"; };
+		B7E16E7D1B30E7D500717CCD /* SideMenu__0008_Shape-434.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SideMenu__0008_Shape-434.png"; sourceTree = "<group>"; };
+		B7E16E7E1B30E7D500717CCD /* SideMenu__0009_Shape-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SideMenu__0009_Shape-15.png"; sourceTree = "<group>"; };
+		B7E16E7F1B30E7D500717CCD /* SideMenu__0010_Shape-101.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SideMenu__0010_Shape-101.png"; sourceTree = "<group>"; };
+		B7E16E801B30E7D500717CCD /* SideMenu__0011_Shape-137.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SideMenu__0011_Shape-137.png"; sourceTree = "<group>"; };
 		B7E56CDE1B26754500DBE055 /* Fut5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fut5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E56CE21B26754500DBE055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E56CE31B26754500DBE055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +69,7 @@
 		B7E56CF31B26754600DBE055 /* Fut5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fut5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E56CF81B26754600DBE055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7E56CF91B26754600DBE055 /* Fut5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fut5Tests.swift; sourceTree = "<group>"; };
+		B7E56D041B2675E200DBE055 /* background_ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_ios.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +90,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7E16E6C1B30E31A00717CCD /* LeftSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B7E16E6E1B30E43400717CCD /* MMDrawerBarButtonItem.h */,
+				B7E16E6F1B30E43400717CCD /* MMDrawerBarButtonItem.m */,
+				B7E16E701B30E43400717CCD /* MMDrawerController.h */,
+				B7E16E711B30E43400717CCD /* MMDrawerController.m */,
+				B7E16E721B30E43400717CCD /* MMDrawerController+Subclass.h */,
+				B7E16E731B30E43400717CCD /* MMDrawerVisualState.h */,
+				B7E16E741B30E43400717CCD /* MMDrawerVisualState.m */,
+				B7E16E751B30E43400717CCD /* UIViewController+MMDrawerController.h */,
+				B7E16E761B30E43400717CCD /* UIViewController+MMDrawerController.m */,
+				B7E16E6D1B30E43300717CCD /* Fut5-Bridging-Header.h */,
+			);
+			name = LeftSideMenu;
+			sourceTree = "<group>";
+		};
 		B7E56CD51B26754500DBE055 = {
 			isa = PBXGroup;
 			children = (
@@ -77,12 +128,18 @@
 		B7E56CE01B26754500DBE055 /* Fut5 */ = {
 			isa = PBXGroup;
 			children = (
+				B7E16E6C1B30E31A00717CCD /* LeftSideMenu */,
+				B7E56D031B2675D100DBE055 /* images */,
 				B7E56CE31B26754500DBE055 /* AppDelegate.swift */,
 				B7E56CE51B26754500DBE055 /* ViewController.swift */,
 				B7E56CE71B26754500DBE055 /* Main.storyboard */,
 				B7E56CEA1B26754500DBE055 /* Images.xcassets */,
 				B7E56CEC1B26754500DBE055 /* LaunchScreen.xib */,
 				B7E56CE11B26754500DBE055 /* Supporting Files */,
+				B7DDFBC91B26872800E168A9 /* LoginViewController.swift */,
+				B75FD6A51B2692E50085129A /* RegistrationViewController.swift */,
+				B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */,
+				B7E16E7B1B30E5A900717CCD /* LeftDrawerViewController.swift */,
 			);
 			path = Fut5;
 			sourceTree = "<group>";
@@ -110,6 +167,19 @@
 				B7E56CF81B26754600DBE055 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7E56D031B2675D100DBE055 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B7E16E7D1B30E7D500717CCD /* SideMenu__0008_Shape-434.png */,
+				B7E16E7E1B30E7D500717CCD /* SideMenu__0009_Shape-15.png */,
+				B7E16E7F1B30E7D500717CCD /* SideMenu__0010_Shape-101.png */,
+				B7E16E801B30E7D500717CCD /* SideMenu__0011_Shape-137.png */,
+				B7DDFBC71B2682FB00E168A9 /* login_logo.png */,
+				B7E56D041B2675E200DBE055 /* background_ios.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +262,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E16E821B30E7D500717CCD /* SideMenu__0009_Shape-15.png in Resources */,
 				B7E56CE91B26754500DBE055 /* Main.storyboard in Resources */,
+				B7E16E841B30E7D500717CCD /* SideMenu__0011_Shape-137.png in Resources */,
+				B7DDFBC81B2682FB00E168A9 /* login_logo.png in Resources */,
 				B7E56CEE1B26754500DBE055 /* LaunchScreen.xib in Resources */,
+				B7E16E811B30E7D500717CCD /* SideMenu__0008_Shape-434.png in Resources */,
 				B7E56CEB1B26754500DBE055 /* Images.xcassets in Resources */,
+				B7E56D051B2675E300DBE055 /* background_ios.png in Resources */,
+				B7E16E831B30E7D500717CCD /* SideMenu__0010_Shape-101.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DDFBCA1B26872800E168A9 /* LoginViewController.swift in Sources */,
+				B7E16E771B30E43400717CCD /* MMDrawerBarButtonItem.m in Sources */,
+				B7E16E7C1B30E5A900717CCD /* LeftDrawerViewController.swift in Sources */,
+				B7E16E781B30E43400717CCD /* MMDrawerController.m in Sources */,
 				B7E56CE61B26754500DBE055 /* ViewController.swift in Sources */,
+				B7E16E791B30E43400717CCD /* MMDrawerVisualState.m in Sources */,
+				B75FD6A61B2692E50085129A /* RegistrationViewController.swift in Sources */,
+				B7E16E7A1B30E43400717CCD /* UIViewController+MMDrawerController.m in Sources */,
 				B7E56CE41B26754500DBE055 /* AppDelegate.swift in Sources */,
+				B7AACAFE1B2A6E09005585B4 /* MyBookingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +422,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Fut5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fut5/Fut5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,9 +435,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Fut5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Fut5/Fut5-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +496,7 @@
 				B7E56CFF1B26754600DBE055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7E56D001B26754600DBE055 /* Build configuration list for PBXNativeTarget "Fut5Tests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +505,7 @@
 				B7E56D021B26754600DBE055 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

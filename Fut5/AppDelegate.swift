@@ -12,10 +12,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var bookingContainer: MMDrawerController?
 
-
+    // Modified to accommodate a left navigation drawer
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var rootViewController = self.window!.rootViewController
+        var mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var bookingViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController
+        var leftDrawerViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftDrawerViewController") as LeftDrawerViewController
+        
+        var bookingNav = UINavigationController(rootViewController: bookingViewController)
+        var leftDrawerNav = UINavigationController(rootViewController: leftDrawerViewController)
+        
+        bookingContainer = MMDrawerController(centerViewController: bookingNav, leftDrawerViewController: leftDrawerNav)
+        
+        bookingContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
+        bookingContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+        
+        window!.rootViewController = bookingContainer
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
