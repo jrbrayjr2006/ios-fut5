@@ -22,6 +22,17 @@ class LeftDrawerViewController: UIViewController {
     }
     
 
+    @IBAction func logoutOnTouchUp(sender: UIButton) {
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        
+        // Close the navigation drawer
+        appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn");
+        
+        // Close the app
+        println("Closing Fut5...");
+        //self.performSegueWithIdentifier("bookingToLoginSegue", sender: self);
+    }
     /*
     // MARK: - Navigation
 

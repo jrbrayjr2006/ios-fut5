@@ -13,6 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameLoginTextView: UITextField!
     @IBOutlet weak var passwordLoginTextView: UITextField!
     
+    let loginUrl : String = "http://54.88.113.204/soccerbooking/login.php";
+    // http://www.swiftdeveloperblog.com/http-post-example-script/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,9 +37,28 @@ class LoginViewController: UIViewController {
             return;
         }
         
-        // log user in
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn");
-        self.dismissViewControllerAnimated(true, completion: nil);
+        // authenticate user
+        let networkAdapter = NetworkAdapter(serviceUrl : loginUrl);
+        var status : String = networkAdapter.login(username, password: password);
+        
+        // DEBUG statement
+        println("The return status is \(status).");
+        
+        let user : User = User.sharedInstance;
+        
+        if status != "200" {
+            var alertView:UIAlertView = UIAlertView();
+            alertView.title = "Login Failed!"
+            alertView.message = "Please try again!"
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            return;
+        } else {
+            // log user in
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn");
+            self.dismissViewControllerAnimated(true, completion: nil);
+        }
         
         //var dbUsername = NSUserDefaults.standardUserDefaults().objectForKey("username");
         //var dbPassword = NSUserDefaults.standardUserDefaults().objectForKey("password");

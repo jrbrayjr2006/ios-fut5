@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74971851B4B0E6700B33E86 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74971841B4B0E6700B33E86 /* CloudKit.framework */; };
 		B75FD6A61B2692E50085129A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75FD6A51B2692E50085129A /* RegistrationViewController.swift */; };
+		B78E209A1B42168200FD8E39 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78E20991B42168200FD8E39 /* NetworkAdapter.swift */; };
+		B78E209C1B421F7500FD8E39 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78E209B1B421F7500FD8E39 /* User.swift */; };
 		B7AACAFE1B2A6E09005585B4 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */; };
 		B7DDFBC81B2682FB00E168A9 /* login_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DDFBC71B2682FB00E168A9 /* login_logo.png */; };
 		B7DDFBCA1B26872800E168A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDFBC91B26872800E168A9 /* LoginViewController.swift */; };
@@ -40,7 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B74971841B4B0E6700B33E86 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B75FD6A51B2692E50085129A /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		B78E20991B42168200FD8E39 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
+		B78E209B1B421F7500FD8E39 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		B7DDFBC71B2682FB00E168A9 /* login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo.png; sourceTree = "<group>"; };
 		B7DDFBC91B26872800E168A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74971851B4B0E6700B33E86 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,7 @@
 		B7E56CD51B26754500DBE055 = {
 			isa = PBXGroup;
 			children = (
+				B74971841B4B0E6700B33E86 /* CloudKit.framework */,
 				B7E56CE01B26754500DBE055 /* Fut5 */,
 				B7E56CF61B26754600DBE055 /* Fut5Tests */,
 				B7E56CDF1B26754500DBE055 /* Products */,
@@ -140,6 +148,8 @@
 				B75FD6A51B2692E50085129A /* RegistrationViewController.swift */,
 				B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */,
 				B7E16E7B1B30E5A900717CCD /* LeftDrawerViewController.swift */,
+				B78E20991B42168200FD8E39 /* NetworkAdapter.swift */,
+				B78E209B1B421F7500FD8E39 /* User.swift */,
 			);
 			path = Fut5;
 			sourceTree = "<group>";
@@ -296,6 +306,8 @@
 				B7E16E791B30E43400717CCD /* MMDrawerVisualState.m in Sources */,
 				B75FD6A61B2692E50085129A /* RegistrationViewController.swift in Sources */,
 				B7E16E7A1B30E43400717CCD /* UIViewController+MMDrawerController.m in Sources */,
+				B78E209C1B421F7500FD8E39 /* User.swift in Sources */,
+				B78E209A1B42168200FD8E39 /* NetworkAdapter.swift in Sources */,
 				B7E56CE41B26754500DBE055 /* AppDelegate.swift in Sources */,
 				B7AACAFE1B2A6E09005585B4 /* MyBookingsViewController.swift in Sources */,
 			);
