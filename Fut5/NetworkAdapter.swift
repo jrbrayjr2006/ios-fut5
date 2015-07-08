@@ -20,7 +20,7 @@ class NetworkAdapter: NSObject {
     // Try different approach to parsing json object
     var data : NSMutableData = NSMutableData();
     
-    init(serviceUrl : String) {
+    init(serviceUrl : NSString) {
         self.serviceUrl = serviceUrl;
     }
     
@@ -29,7 +29,9 @@ class NetworkAdapter: NSObject {
         //var tmpUrl: String = "\(self.serviceUrl)?username=\(username)&password=\(password)";
         //var url: NSURL = NSURL(string : self.serviceUrl!)!;
         var post :NSString = "username=\(username)&password=\(password)";
-        var url: NSURL = NSURL(string : self.serviceUrl!)!;
+        var newUrlString = String(self.serviceUrl!) + "?" + String(post);
+        NSLog("This is the url:  %@", newUrlString);
+        var url: NSURL = NSURL(string : newUrlString)!;
         
         NSLog("PostData: %@", post);
         
@@ -74,12 +76,14 @@ class NetworkAdapter: NSObject {
             
             let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
             
+            let mstatus:NSInteger = jsonData.valueForKey("status") as NSInteger;
+            let success:NSString = jsonData.valueForKey("status_message") as NSString;
             
-            let success:NSString = jsonData.valueForKey("status_message") as NSString
+            let data:NSArray = jsonData.valueForKey("data") as NSArray;
             
-            //[jsonData[@"success"] integerValue];
+            NSLog("Login Data %@", data);
             
-            NSLog("Success: %ld", success);
+            NSLog("Success: %ld", mstatus);
             
             if(success == "SUCCESS")
             {
@@ -94,8 +98,8 @@ class NetworkAdapter: NSObject {
             } else {
                 var error_msg:NSString
                 
-                if jsonData["error_message"] as? NSString != nil {
-                    error_msg = jsonData["error_message"] as NSString
+                if jsonData["status_message"] as? NSString != nil {
+                    error_msg = jsonData["status_message"] as NSString
                 } else {
                     error_msg = "Unknown Error"
                 }

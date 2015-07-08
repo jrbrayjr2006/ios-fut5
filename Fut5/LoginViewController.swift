@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import Foundation
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameLoginTextView: UITextField!
     @IBOutlet weak var passwordLoginTextView: UITextField!
     
-    let loginUrl : String = "http://54.88.113.204/soccerbooking/login.php";
+    let loginUrl : NSString = "http://54.88.113.204/soccerbooking/login.php";
     // http://www.swiftdeveloperblog.com/http-post-example-script/
     
     override func viewDidLoad() {
