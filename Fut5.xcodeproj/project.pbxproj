@@ -16,6 +16,8 @@
 		B7AACAFE1B2A6E09005585B4 /* MyBookingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */; };
 		B7C623001B4E12B2009E4D79 /* BookingTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C622FF1B4E12B2009E4D79 /* BookingTimeTableViewCell.swift */; };
 		B7C623021B4E138D009E4D79 /* book_now.png in Resources */ = {isa = PBXBuildFile; fileRef = B7C623011B4E138D009E4D79 /* book_now.png */; };
+		B7D464941B4ED8780050B4E1 /* cancel_image_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D464931B4ED8780050B4E1 /* cancel_image_button.png */; };
+		B7D464961B4EDA200050B4E1 /* MyBookingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D464951B4EDA200050B4E1 /* MyBookingTableViewCell.swift */; };
 		B7DDFBC81B2682FB00E168A9 /* login_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B7DDFBC71B2682FB00E168A9 /* login_logo.png */; };
 		B7DDFBCA1B26872800E168A9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DDFBC91B26872800E168A9 /* LoginViewController.swift */; };
 		B7E16E771B30E43400717CCD /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7E16E6F1B30E43400717CCD /* MMDrawerBarButtonItem.m */; };
@@ -56,6 +58,8 @@
 		B7AACAFD1B2A6E09005585B4 /* MyBookingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookingsViewController.swift; sourceTree = "<group>"; };
 		B7C622FF1B4E12B2009E4D79 /* BookingTimeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingTimeTableViewCell.swift; sourceTree = "<group>"; };
 		B7C623011B4E138D009E4D79 /* book_now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_now.png; sourceTree = "<group>"; };
+		B7D464931B4ED8780050B4E1 /* cancel_image_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel_image_button.png; sourceTree = "<group>"; };
+		B7D464951B4EDA200050B4E1 /* MyBookingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBookingTableViewCell.swift; sourceTree = "<group>"; };
 		B7DDFBC71B2682FB00E168A9 /* login_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_logo.png; sourceTree = "<group>"; };
 		B7DDFBC91B26872800E168A9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B7E16E6D1B30E43300717CCD /* Fut5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fut5-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				B7579F671B4DDC3D0044AC99 /* Booking.swift */,
 				B7579F691B4DDDAB0044AC99 /* SoccerField.swift */,
 				B7C622FF1B4E12B2009E4D79 /* BookingTimeTableViewCell.swift */,
+				B7D464951B4EDA200050B4E1 /* MyBookingTableViewCell.swift */,
 			);
 			path = Fut5;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 				B7E16E801B30E7D500717CCD /* SideMenu__0011_Shape-137.png */,
 				B7DDFBC71B2682FB00E168A9 /* login_logo.png */,
 				B7C623011B4E138D009E4D79 /* book_now.png */,
+				B7D464931B4ED8780050B4E1 /* cancel_image_button.png */,
 				B7E56D041B2675E200DBE055 /* background_ios.png */,
 			);
 			name = images;
@@ -293,6 +299,7 @@
 				B7E16E811B30E7D500717CCD /* SideMenu__0008_Shape-434.png in Resources */,
 				B7E56CEB1B26754500DBE055 /* Images.xcassets in Resources */,
 				B7E56D051B2675E300DBE055 /* background_ios.png in Resources */,
+				B7D464941B4ED8780050B4E1 /* cancel_image_button.png in Resources */,
 				B7E16E831B30E7D500717CCD /* SideMenu__0010_Shape-101.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +327,7 @@
 				B7579F681B4DDC3D0044AC99 /* Booking.swift in Sources */,
 				B7C623001B4E12B2009E4D79 /* BookingTimeTableViewCell.swift in Sources */,
 				B7E16E791B30E43400717CCD /* MMDrawerVisualState.m in Sources */,
+				B7D464961B4EDA200050B4E1 /* MyBookingTableViewCell.swift in Sources */,
 				B75FD6A61B2692E50085129A /* RegistrationViewController.swift in Sources */,
 				B7E16E7A1B30E43400717CCD /* UIViewController+MMDrawerController.m in Sources */,
 				B78E209C1B421F7500FD8E39 /* User.swift in Sources */,

@@ -16,13 +16,21 @@ class Booking: NSObject {
     var bookingTimeId : Int?;
     var soccerFieldId : Int?
     var bookingTime : String?
-    //var dateTime : Date?;
+    var bookingDate : String?;
     var time : TimeValue?;
     var soccerFieldName : String?;
+    var bookingStartTime : String?
+    var bookingEndTime : String?
     var duration : Int?;
     
     override init() {
         //
+    }
+    
+    init(startTime : String, endTime : String, date : String) {
+        self.bookingStartTime = startTime;
+        self.bookingEndTime = endTime;
+        self.bookingDate = date;
     }
    
 }

@@ -11,14 +11,19 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var BookingTimesTableView: UITableView!
+    @IBOutlet weak var bookingDateLabel: UILabel!
     
     var items: [String] = ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM"]
+    
+    var today : NSDate = NSDate();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.BookingTimesTableView.registerClass(BookingTimeTableViewCell.self, forCellReuseIdentifier: "bookingCell")
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.bookingDateLabel.text = today.description;
     }
 
     override func didReceiveMemoryWarning() {

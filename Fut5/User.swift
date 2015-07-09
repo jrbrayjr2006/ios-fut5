@@ -26,6 +26,7 @@ class User: NSObject {
         self.username = _username;
     }
     
+    var id : String?
     var username : String?;
     var password : String?;
     var firstname : String?;

@@ -10,10 +10,21 @@ import UIKit
 
 class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var myBookingsUITableView: UITableView!
+    
+    var myBookings : [Booking] = [Booking]();
+    var user : User = User.sharedInstance;
+    
+    let url: String = "http://54.88.113.204/soccerbooking/getMyBookings.php";
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        getMyBookings();
+        self.myBookingsUITableView.registerClass(MyBookingTableViewCell.self, forCellReuseIdentifier: "bookingCell");
+        self.myBookingsUITableView.backgroundColor = UIColor.clearColor();
+        self.myBookingsUITableView.rowHeight = 180.0;
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,20 +48,46 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0;
+        return self.myBookings.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier = "myBookingCell";
+        var cell : MyBookingTableViewCell = self.myBookingsUITableView.dequeueReusableCellWithIdentifier(cellIdentifier) as MyBookingTableViewCell;
         
-        var cell : UITableViewCell?
+        let startTime : String = myBookings[indexPath.row].bookingStartTime!;
+        let endTime : String = myBookings[indexPath.row].bookingEndTime!;
+        cell.myBookingDateLabel.text = myBookings[indexPath.row].bookingDate;
+        cell.myBookingTimeLabel.text = "\(startTime) to \(endTime)";
+        cell.backgroundColor = UIColor.clearColor();
         
-        //TODO under construction
+        NSLog("The time is : %@", self.myBookings[indexPath.row].bookingStartTime!);
         
-        return cell!;
+        return cell;
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         //TODO under construction
+        
+        println("You selected cell #\(indexPath.row)!")
+    }
+    
+    // populate the myBookings array
+    func getMyBookings() -> [Booking] {
+        
+        if(user.id != nil) {
+            NSLog("My user id is %@", user.id!);
+        }
+        
+        var networkAdapter : NetworkAdapter = NetworkAdapter(serviceUrl : url);
+        self.myBookings = networkAdapter.getMyBookings(user.id!);
+        
+        if(self.myBookings.isEmpty) {
+            var booking1 : Booking = Booking(startTime: "10:00 AM", endTime: "11:00 AM", date: "8/21/2015")
+            myBookings.append(booking1);
+        }
+        
+        return self.myBookings;
     }
 
 }
