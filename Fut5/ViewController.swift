@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.BookingTimesTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.BookingTimesTableView.registerClass(BookingTimeTableViewCell.self, forCellReuseIdentifier: "bookingCell")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -45,11 +45,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.performSegueWithIdentifier("bookingToLoginSegue", sender: self);
     }
     
+    // there will only be 1 section in this table view
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    
     // create each cell for the table
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell: UITableViewCell = self.BookingTimesTableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
-        cell.textLabel?.text = self.items[indexPath.row]
-        return cell
+        let cellIdentifier = "bookingTimeCell";
+        var cell = self.BookingTimesTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as BookingTimeTableViewCell;
+        //cell.textLabel?.text = self.items[indexPath.row]
+        NSLog("The time is : %@", self.items[indexPath.row]);
+        cell.bookingTimeLabel.text = self.items[indexPath.row];
+        
+        return cell;
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -102,6 +111,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // fromBookingsToMyBookings
         
         self.presentViewController(myMessage, animated: true, completion: nil);
+    }
+    
+    // get available soccer fields
+    func getSoccerFields() -> [String] {
+        //TODO under construction
+        return [];
     }
 
 }

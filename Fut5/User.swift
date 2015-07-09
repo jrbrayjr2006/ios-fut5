@@ -18,7 +18,20 @@ class User: NSObject {
         return Static.instance;
     }
     
+    override init() {
+        self.username = "anonymous";
+    }
+    
+    init(_username : String) {
+        self.username = _username;
+    }
+    
     var username : String?;
     var password : String?;
+    var firstname : String?;
+    var lastname : String?;
+    
+    // set the initial bookings to an empty array
+    var myBookings : [Booking] = [];
    
 }

@@ -104,13 +104,48 @@
                                     <action selector="soccerFieldSelectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Rc-lc-YKE"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-YP-efn">
+                            <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-YP-efn">
                                 <rect key="frame" x="16" y="205" width="568" height="350"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="bookingTimeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookingTimeCell" rowHeight="90" id="Zm9-ex-cVJ" customClass="BookingTimeTableViewCell" customModule="Fut5" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zm9-ex-cVJ" id="UaM-4F-ixh">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="bookingTimeLabel" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-Xl-NTR">
+                                                    <rect key="frame" x="35" y="34" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXB-b3-pE7">
+                                                    <rect key="frame" x="421" y="25" width="102" height="40"/>
+                                                    <state key="normal" backgroundImage="book_now.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="bookNowOnTouchUp:" destination="Zm9-ex-cVJ" eventType="touchUpInside" id="Pti-aV-AoE"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pex-Xl-NTR" firstAttribute="top" secondItem="UaM-4F-ixh" secondAttribute="topMargin" constant="18" id="65Y-Fz-yb8"/>
+                                                <constraint firstItem="rXB-b3-pE7" firstAttribute="top" secondItem="UaM-4F-ixh" secondAttribute="topMargin" constant="17" id="JLn-CA-5aE"/>
+                                                <constraint firstItem="Pex-Xl-NTR" firstAttribute="leading" secondItem="UaM-4F-ixh" secondAttribute="leadingMargin" constant="27" id="YKE-at-7TV"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rXB-b3-pE7" secondAttribute="trailing" constant="37" id="vqT-Of-e0U"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookingTimeLabel" destination="Pex-Xl-NTR" id="U8g-rE-jkZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ag9-uX-xEm"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ps4-XH-1O2"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6lt-xR-h4i"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TXM-8a-Ya8"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available Times" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qb5-eQ-rf1">
@@ -479,6 +514,7 @@
         <image name="SideMenu__0010_Shape-101.png" width="40" height="29"/>
         <image name="SideMenu__0011_Shape-137.png" width="37" height="40"/>
         <image name="background_ios.png" width="640" height="1136"/>
+        <image name="book_now.png" width="102" height="40"/>
         <image name="login_logo.png" width="447" height="168"/>
     </resources>
 </document>

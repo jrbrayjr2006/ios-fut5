@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyBookingsViewController: UIViewController {
+class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,5 +34,23 @@ class MyBookingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell : UITableViewCell?
+        
+        //TODO under construction
+        
+        return cell!;
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        //TODO under construction
+    }
 
 }

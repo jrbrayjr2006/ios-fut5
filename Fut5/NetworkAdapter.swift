@@ -94,6 +94,9 @@ class NetworkAdapter: NSObject {
                 prefs.setInteger(1, forKey: "ISLOGGEDIN")
                 prefs.synchronize()
                 
+                var user : User = User.sharedInstance;
+                user.username = username;
+                
                 //self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 var error_msg:NSString
@@ -115,6 +118,15 @@ class NetworkAdapter: NSObject {
         }
         
         return self.status!;
+    }
+    
+    // get soccer fields from server
+    func getSoccerFields() -> [SoccerField] {
+        var fields = [SoccerField]();
+        
+        //TODO under construction
+        
+        return fields;
     }
    
 }

@@ -46,6 +46,7 @@ class LoginViewController: UIViewController {
         println("The return status is \(status).");
         
         let user : User = User.sharedInstance;
+        NSLog("Username is %@", user.username!);
         
         if status != "200" {
             var alertView:UIAlertView = UIAlertView();
