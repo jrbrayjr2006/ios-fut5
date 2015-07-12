@@ -28,6 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateFormatter.dateFormat = "MM/dd/y";
         self.bookingDateLabel.text = dateFormatter.stringFromDate(today);
         
+        // The following line of code allows me to add a custom navigation background image to the navigation bar in iOS 8 and later
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "navigation_bar_background")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
     }
 
