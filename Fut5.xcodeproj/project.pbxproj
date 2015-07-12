@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B730C7811B52F9D10033E1DA /* Bookings__0002_My-Bookings.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */; };
+		B730C7831B52FA530033E1DA /* Bookings__nav_drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */; };
+		B730C7851B5307000033E1DA /* navigation_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7841B5307000033E1DA /* navigation_bar_background.png */; };
 		B74971851B4B0E6700B33E86 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74971841B4B0E6700B33E86 /* CloudKit.framework */; };
 		B7579F681B4DDC3D0044AC99 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7579F671B4DDC3D0044AC99 /* Booking.swift */; };
 		B7579F6A1B4DDDAB0044AC99 /* SoccerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7579F691B4DDDAB0044AC99 /* SoccerField.swift */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookings__0002_My-Bookings.png"; sourceTree = "<group>"; };
+		B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bookings__nav_drawer.png; sourceTree = "<group>"; };
+		B730C7841B5307000033E1DA /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
 		B74971841B4B0E6700B33E86 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B7579F671B4DDC3D0044AC99 /* Booking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		B7579F691B4DDDAB0044AC99 /* SoccerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoccerField.swift; sourceTree = "<group>"; };
@@ -202,10 +208,13 @@
 				B7E16E7E1B30E7D500717CCD /* SideMenu__0009_Shape-15.png */,
 				B7E16E7F1B30E7D500717CCD /* SideMenu__0010_Shape-101.png */,
 				B7E16E801B30E7D500717CCD /* SideMenu__0011_Shape-137.png */,
+				B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */,
+				B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */,
 				B7DDFBC71B2682FB00E168A9 /* login_logo.png */,
 				B7C623011B4E138D009E4D79 /* book_now.png */,
 				B7D464931B4ED8780050B4E1 /* cancel_image_button.png */,
 				B7E56D041B2675E200DBE055 /* background_ios.png */,
+				B730C7841B5307000033E1DA /* navigation_bar_background.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -297,10 +306,13 @@
 				B7E56CEE1B26754500DBE055 /* LaunchScreen.xib in Resources */,
 				B7C623021B4E138D009E4D79 /* book_now.png in Resources */,
 				B7E16E811B30E7D500717CCD /* SideMenu__0008_Shape-434.png in Resources */,
+				B730C7851B5307000033E1DA /* navigation_bar_background.png in Resources */,
+				B730C7811B52F9D10033E1DA /* Bookings__0002_My-Bookings.png in Resources */,
 				B7E56CEB1B26754500DBE055 /* Images.xcassets in Resources */,
 				B7E56D051B2675E300DBE055 /* background_ios.png in Resources */,
 				B7D464941B4ED8780050B4E1 /* cancel_image_button.png in Resources */,
 				B7E16E831B30E7D500717CCD /* SideMenu__0010_Shape-101.png in Resources */,
+				B730C7831B52FA530033E1DA /* Bookings__nav_drawer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

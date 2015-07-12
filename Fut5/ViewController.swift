@@ -16,14 +16,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var items: [String] = ["12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM", "8:00 PM", "9:00 PM"]
     
     var today : NSDate = NSDate();
+    var dateFormatter : NSDateFormatter = NSDateFormatter();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.BookingTimesTableView.registerClass(BookingTimeTableViewCell.self, forCellReuseIdentifier: "bookingCell")
         // Do any additional setup after loading the view, typically from a nib.
+        self.BookingTimesTableView.backgroundColor = UIColor.clearColor();
         
-        self.bookingDateLabel.text = today.description;
+        dateFormatter.dateFormat = "MM/dd/y";
+        self.bookingDateLabel.text = dateFormatter.stringFromDate(today);
+        
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "navigation_bar_background")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,6 +67,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //cell.textLabel?.text = self.items[indexPath.row]
         NSLog("The time is : %@", self.items[indexPath.row]);
         cell.bookingTimeLabel.text = self.items[indexPath.row];
+        
+        cell.backgroundColor = UIColor.clearColor();
         
         return cell;
     }

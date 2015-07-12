@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var bookingContainer: MMDrawerController?
+    //var myBookingContainer: MMDrawerController?
 
     // Modified to accommodate a left navigation drawer
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -25,13 +26,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var bookingViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController
         var leftDrawerViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftDrawerViewController") as LeftDrawerViewController
         
+        //var myBookingsViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController
+        
         var bookingNav = UINavigationController(rootViewController: bookingViewController)
         var leftDrawerNav = UINavigationController(rootViewController: leftDrawerViewController)
+        
+        //var myBookingNav = UINavigationController(rootViewController: myBookingsViewController)
         
         bookingContainer = MMDrawerController(centerViewController: bookingNav, leftDrawerViewController: leftDrawerNav)
         
         bookingContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
         bookingContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+        
+        //bookingContainer = MMDrawerController(centerViewController: myBookingNav, leftDrawerViewController: leftDrawerNav)
+        
+        //myBookingContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
+        //myBookingContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+        
+        
         
         window!.rootViewController = bookingContainer
         window!.makeKeyAndVisible()

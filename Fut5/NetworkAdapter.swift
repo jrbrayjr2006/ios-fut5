@@ -207,6 +207,9 @@ class NetworkAdapter: NSObject {
                     var tmpId : String = (tmpBookingDictionary["duration"] as String);
                     tmpBooking.duration = tmpId.toInt();
                     tmpBooking.bookingStartTime = (tmpBookingDictionary["timeslot"] as String);
+                    tmpBooking.soccerFieldName = (tmpBookingDictionary["name"] as String);
+                    var soccerIdString : String = (tmpBookingDictionary["soccer_id"] as String);
+                    tmpBooking.soccerFieldId = soccerIdString.toInt();
                     //TODO still working on following values
                     tmpBooking.bookingEndTime = "tbd";
                     tmpBooking.bookingDate = "tbd";

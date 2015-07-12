@@ -57,8 +57,10 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let startTime : String = myBookings[indexPath.row].bookingStartTime!;
         let endTime : String = myBookings[indexPath.row].bookingEndTime!;
+        let fieldName : String = myBookings[indexPath.row].soccerFieldName!;
+        //myBookings[indexPath.row]
         cell.myBookingDateLabel.text = myBookings[indexPath.row].bookingDate;
-        cell.myBookingTimeLabel.text = "\(startTime) to \(endTime)";
+        cell.myBookingTimeLabel.text = "\(startTime) to \(endTime) at \(fieldName)";
         cell.backgroundColor = UIColor.clearColor();
         
         NSLog("The time is : %@", self.myBookings[indexPath.row].bookingStartTime!);
