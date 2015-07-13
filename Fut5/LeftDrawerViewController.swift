@@ -8,13 +8,20 @@
 
 import UIKit
 
-class LeftDrawerViewController: UIViewController {
+class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var fullnameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var leftDrawerMenuTableView: UITableView!
+    
+    var menuItems : [MenuItem] = [MenuItem]();
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad();
+        
+        setMenuItems();
+        self.leftDrawerMenuTableView.registerClass(MenuItemTableViewCell.self, forCellReuseIdentifier: "MenuCell");
+        self.leftDrawerMenuTableView.backgroundColor = UIColor.clearColor();
 
         // Do any additional setup after loading the view.
         getUserInfo();
@@ -26,17 +33,6 @@ class LeftDrawerViewController: UIViewController {
     }
     
 
-    @IBAction func logoutOnTouchUp(sender: UIButton) {
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
-        
-        // Close the navigation drawer
-        appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
-        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn");
-        
-        // Close the app
-        println("Closing Fut5...");
-        //self.performSegueWithIdentifier("bookingToLoginSegue", sender: self);
-    }
     /*
     // MARK: - Navigation
 
@@ -47,20 +43,6 @@ class LeftDrawerViewController: UIViewController {
     }
     */
     
-    
-    @IBAction func openMyBookingsOnTouchUp(sender: UIButton) {
-        NSLog("Opening My Bookings from left drawer...");
-        var myBookingsViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
-        
-        var navController = UINavigationController(rootViewController: myBookingsViewController);
-        
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
-        
-        appDelegate.bookingContainer!.centerViewController = myBookingsViewController;
-        
-        // Close the navigation drawer
-        appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
-    }
     
     func getUserInfo() -> Void {
         var user : User = User.sharedInstance;
@@ -80,6 +62,43 @@ class LeftDrawerViewController: UIViewController {
         
         self.fullnameLabel.text = "\(firstname!) \(lastname!)";
         self.usernameLabel.text = username;
+    }
+    
+    func setMenuItems() -> Void {
+        if(menuItems.isEmpty) {
+            var menuItem1 : MenuItem = MenuItem(_menuItemLabelName: "Bookings", _menuImageName: "SideMenu__0011_Shape-137");
+            var menuItem2 : MenuItem = MenuItem(_menuItemLabelName: "Knockout list", _menuImageName: "SideMenu__0010_Shape-101");
+            var menuItem3 : MenuItem = MenuItem(_menuItemLabelName: "Settings", _menuImageName: "SideMenu__0009_Shape-15");
+            var menuItem4 : MenuItem = MenuItem(_menuItemLabelName: "Log out", _menuImageName: "SideMenu__0008_Shape-434");
+            
+            self.menuItems.append(menuItem1);
+            self.menuItems.append(menuItem2);
+            self.menuItems.append(menuItem3);
+            self.menuItems.append(menuItem4);
+        }
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.menuItems.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellIdentifier : String = "MenuItemCell";
+        var cell : MenuItemTableViewCell = self.leftDrawerMenuTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as MenuItemTableViewCell;
+        
+        //NSLog("The menu item is : %@", self.menuItems[indexPath.row]);
+        let itemName : String = menuItems[indexPath.row].menuItemLabelName!;
+        let imageName : String = menuItems[indexPath.row].menuImageName!;
+        let image : UIImage = UIImage(named: imageName)!;
+        cell.menuItemLabel.text = itemName;
+        cell.menuItemImage.image = image;
+        //cell.menuItemImage = UIImageView(image: image);
+        cell.backgroundColor = UIColor.clearColor();
+        return cell;
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //TODO
     }
 
 }

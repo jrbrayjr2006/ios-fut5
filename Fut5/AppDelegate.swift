@@ -42,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //myBookingContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
         //myBookingContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()];
         
         
         

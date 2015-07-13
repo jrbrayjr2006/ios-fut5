@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72265BD1B534C43006292A5 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72265BC1B534C43006292A5 /* MenuItemTableViewCell.swift */; };
+		B72265BF1B53509C006292A5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72265BE1B53509C006292A5 /* MenuItem.swift */; };
 		B730C7811B52F9D10033E1DA /* Bookings__0002_My-Bookings.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */; };
 		B730C7831B52FA530033E1DA /* Bookings__nav_drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */; };
 		B730C7851B5307000033E1DA /* navigation_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7841B5307000033E1DA /* navigation_bar_background.png */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B72265BC1B534C43006292A5 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		B72265BE1B53509C006292A5 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookings__0002_My-Bookings.png"; sourceTree = "<group>"; };
 		B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bookings__nav_drawer.png; sourceTree = "<group>"; };
 		B730C7841B5307000033E1DA /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				B7579F691B4DDDAB0044AC99 /* SoccerField.swift */,
 				B7C622FF1B4E12B2009E4D79 /* BookingTimeTableViewCell.swift */,
 				B7D464951B4EDA200050B4E1 /* MyBookingTableViewCell.swift */,
+				B72265BC1B534C43006292A5 /* MenuItemTableViewCell.swift */,
+				B72265BE1B53509C006292A5 /* MenuItem.swift */,
 			);
 			path = Fut5;
 			sourceTree = "<group>";
@@ -347,7 +353,9 @@
 				B75FD6A61B2692E50085129A /* RegistrationViewController.swift in Sources */,
 				B7E16E7A1B30E43400717CCD /* UIViewController+MMDrawerController.m in Sources */,
 				B78E209C1B421F7500FD8E39 /* User.swift in Sources */,
+				B72265BD1B534C43006292A5 /* MenuItemTableViewCell.swift in Sources */,
 				B78E209A1B42168200FD8E39 /* NetworkAdapter.swift in Sources */,
+				B72265BF1B53509C006292A5 /* MenuItem.swift in Sources */,
 				B7E56CE41B26754500DBE055 /* AppDelegate.swift in Sources */,
 				B7AACAFE1B2A6E09005585B4 /* MyBookingsViewController.swift in Sources */,
 			);
