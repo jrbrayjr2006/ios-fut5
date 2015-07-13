@@ -98,7 +98,37 @@ class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //TODO
+        switch(indexPath.row) {
+        case 0:
+            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+            var centerNavController = UINavigationController(rootViewController: centerViewController);
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            
+            appDelegate.bookingContainer!.centerViewController = centerNavController;
+            appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
+            break;
+        case 1:
+            var bookingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController;
+            var bookingNavController = UINavigationController(rootViewController: bookingViewController);
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            
+            appDelegate.bookingContainer!.centerViewController = bookingNavController;
+            appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
+            break;
+        case 2:
+            println("Feature not implemented yet...");
+            break;
+        case 3:
+            var loginViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController;
+            var loginNavController = UINavigationController(rootViewController: loginViewController);
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            
+            appDelegate.bookingContainer!.centerViewController = loginNavController;
+            appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
+            break;
+        default:
+            println("An row in the table has been touched...");
+        }
     }
 
 }

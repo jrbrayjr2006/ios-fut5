@@ -225,7 +225,7 @@
         <!--Login-->
         <scene sceneID="2ja-cO-bP6">
             <objects>
-                <viewController title="Login" id="Jee-sx-rhL" customClass="LoginViewController" customModule="Fut5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Login" id="Jee-sx-rhL" customClass="LoginViewController" customModule="Fut5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xw6-B6-u4Z"/>
                         <viewControllerLayoutGuide type="bottom" id="dw0-sd-kRm"/>
@@ -321,7 +321,7 @@
         <!--My Bookings View Controller-->
         <scene sceneID="B0o-zT-dsh">
             <objects>
-                <viewController id="mbc-gb-lBm" customClass="MyBookingsViewController" customModule="Fut5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyBookingsViewController" id="mbc-gb-lBm" customClass="MyBookingsViewController" customModule="Fut5" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hhu-Hz-msi"/>
                         <viewControllerLayoutGuide type="bottom" id="QF7-Pb-Csu"/>
