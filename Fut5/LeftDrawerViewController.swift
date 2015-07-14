@@ -108,22 +108,22 @@ class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableVi
             appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
             break;
         case 1:
-            var bookingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController;
-            var bookingNavController = UINavigationController(rootViewController: bookingViewController);
+            var knockoutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("KnockoutViewController") as KnockoutViewController;
+            var knockoutNavController = UINavigationController(rootViewController: knockoutViewController);
             var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
             
-            appDelegate.bookingContainer!.centerViewController = bookingNavController;
+            appDelegate.bookingContainer!.centerViewController = knockoutNavController;
             appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
             break;
         case 2:
             println("Feature not implemented yet...");
             break;
         case 3:
-            var loginViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController;
-            var loginNavController = UINavigationController(rootViewController: loginViewController);
+            var bookingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController;
+            var bookingNavController = UINavigationController(rootViewController: bookingViewController);
             var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
             
-            appDelegate.bookingContainer!.centerViewController = loginNavController;
+            appDelegate.bookingContainer!.centerViewController = bookingNavController;
             appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
             break;
         default:

@@ -112,10 +112,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var myMessage = UIAlertController(title: "Select Duration of Booking", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert);
         
         let oneHourAction = UIAlertAction(title: "1 Hour", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
-            self.performSegueWithIdentifier("fromBookingsToMyBookings", sender: self);
+            //self.performSegueWithIdentifier("fromBookingsToMyBookings", sender: self);
+            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+            var centerNavController = UINavigationController(rootViewController: centerViewController);
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            
+            appDelegate.bookingContainer!.centerViewController = centerNavController;
+            //appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
         });
         let twoHourAction = UIAlertAction(title: "2 Hours", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
-            self.performSegueWithIdentifier("fromBookingsToMyBookings", sender: self);
+            //self.performSegueWithIdentifier("fromBookingsToMyBookings", sender: self);
+            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+            var centerNavController = UINavigationController(rootViewController: centerViewController);
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            
+            appDelegate.bookingContainer!.centerViewController = centerNavController;
         });
         
         myMessage.addAction(oneHourAction);

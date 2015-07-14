@@ -86,6 +86,39 @@
             </objects>
             <point key="canvasLocation" x="952" y="-526"/>
         </scene>
+        <!--Knockout View Controller-->
+        <scene sceneID="qcI-Zi-teR">
+            <objects>
+                <viewController storyboardIdentifier="KnockoutViewController" id="hvf-JG-Cei" customClass="KnockoutViewController" customModule="Fut5" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opO-Lq-6WM"/>
+                        <viewControllerLayoutGuide type="bottom" id="BsD-wn-eT7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vfw-s3-YTX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Knockout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrj-7I-313">
+                                <rect key="frame" x="126" y="101" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S2Z-bj-yTQ">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="dsK-uF-DAO">
+                            <connections>
+                                <action selector="leftDrawerNavOnTouchUp:" destination="hvf-JG-Cei" id="eFU-lx-I8M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5r-sW-4sh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2462" y="-526"/>
+        </scene>
         <!--Bookings-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -135,7 +168,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="bookNowOnTouchUp:" destination="Zm9-ex-cVJ" eventType="touchUpInside" id="Pti-aV-AoE"/>
-                                                        <segue destination="mbc-gb-lBm" kind="presentation" id="UMz-xs-Vic"/>
+                                                        <segue destination="GVg-CL-1Da" kind="presentation" id="UMz-xs-Vic"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -215,7 +248,7 @@
                         <outlet property="BookingTimesTableView" destination="Aoj-YP-efn" id="P6B-1C-q36"/>
                         <outlet property="bookingDateLabel" destination="egU-RA-62m" id="xk5-G2-4OV"/>
                         <segue destination="Jee-sx-rhL" kind="presentation" identifier="bookingToLoginSegue" id="cBF-LZ-9fT"/>
-                        <segue destination="mbc-gb-lBm" kind="presentation" identifier="fromBookingsToMyBookings" id="x7v-Bl-e8F"/>
+                        <segue destination="GVg-CL-1Da" kind="presentation" identifier="fromBookingsToMyBookings" id="x7v-Bl-e8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -330,26 +363,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_ios.png" translatesAutoresizingMaskIntoConstraints="NO" id="glS-VM-d4D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background_ios.png" translatesAutoresizingMaskIntoConstraints="NO" id="glS-VM-d4D">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Bookings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H31-6a-hL2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="My Bookings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H31-6a-hL2">
                                 <rect key="frame" x="16" y="97" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1x-7y-7y7">
-                                <rect key="frame" x="16" y="28" width="46" height="30"/>
-                                <state key="normal" title="&lt;">
-                                    <color key="titleColor" red="1" green="0.4461266525" blue="0.1455647806" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="dismissMyBookingsViewOnTouchUp:" destination="mbc-gb-lBm" eventType="touchUpInside" id="XwF-Qg-RMC"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-iC-Kck">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-iC-Kck">
                                 <rect key="frame" x="16" y="138" width="568" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -431,13 +454,20 @@
                             <constraint firstItem="Xzf-iC-Kck" firstAttribute="top" secondItem="H31-6a-hL2" secondAttribute="bottom" constant="20" id="vpY-Hj-M7e"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OfO-WQ-Vi3">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="hz3-Hw-KDQ">
+                            <connections>
+                                <action selector="leftNavigationButtonTouchUp:" destination="mbc-gb-lBm" id="xos-j7-NuX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myBookingsUITableView" destination="Xzf-iC-Kck" id="KPC-7j-i28"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snN-Hl-tWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="880"/>
+            <point key="canvasLocation" x="1764" y="880"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="YZE-AV-LgR">
@@ -570,7 +600,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hel-wX-gWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="886"/>
+            <point key="canvasLocation" x="2462" y="886"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PUP-qd-Yvd">
@@ -589,6 +619,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEC-uT-3lT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="224" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AIA-51-Taz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GVg-CL-1Da" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e4B-6T-ldb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mbc-gb-lBm" kind="relationship" relationship="rootViewController" id="6B8-bm-BnT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oKr-GL-dUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952" y="880"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mhN-AU-jOR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vxa-xC-GIW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ilY-FX-0cq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hvf-JG-Cei" kind="relationship" relationship="rootViewController" id="6He-Vu-Ym2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaW-s8-gFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650" y="-526"/>
         </scene>
     </scenes>
     <resources>

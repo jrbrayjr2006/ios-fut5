@@ -32,9 +32,6 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismissMyBookingsViewOnTouchUp(sender: UIButton) {
-        self.dismissViewControllerAnimated(true, completion: nil);
-    }
 
     /*
     // MARK: - Navigation
@@ -92,4 +89,8 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
         return self.myBookings;
     }
 
+    @IBAction func leftNavigationButtonTouchUp(sender: UIBarButtonItem) {
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
+    }
 }
