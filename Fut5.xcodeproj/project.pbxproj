@@ -10,6 +10,7 @@
 		B72265BD1B534C43006292A5 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72265BC1B534C43006292A5 /* MenuItemTableViewCell.swift */; };
 		B72265BF1B53509C006292A5 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72265BE1B53509C006292A5 /* MenuItem.swift */; };
 		B72265C11B5376D8006292A5 /* KnockoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72265C01B5376D8006292A5 /* KnockoutViewController.swift */; };
+		B72C8ACE1B54BB3600911775 /* KnockoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C8ACD1B54BB3600911775 /* KnockoutTableViewCell.swift */; };
 		B730C7811B52F9D10033E1DA /* Bookings__0002_My-Bookings.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */; };
 		B730C7831B52FA530033E1DA /* Bookings__nav_drawer.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */; };
 		B730C7851B5307000033E1DA /* navigation_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B730C7841B5307000033E1DA /* navigation_bar_background.png */; };
@@ -59,6 +60,7 @@
 		B72265BC1B534C43006292A5 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
 		B72265BE1B53509C006292A5 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		B72265C01B5376D8006292A5 /* KnockoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnockoutViewController.swift; sourceTree = "<group>"; };
+		B72C8ACD1B54BB3600911775 /* KnockoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnockoutTableViewCell.swift; sourceTree = "<group>"; };
 		B730C7801B52F9D10033E1DA /* Bookings__0002_My-Bookings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookings__0002_My-Bookings.png"; sourceTree = "<group>"; };
 		B730C7821B52FA530033E1DA /* Bookings__nav_drawer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bookings__nav_drawer.png; sourceTree = "<group>"; };
 		B730C7841B5307000033E1DA /* navigation_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigation_bar_background.png; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				B72265BC1B534C43006292A5 /* MenuItemTableViewCell.swift */,
 				B72265BE1B53509C006292A5 /* MenuItem.swift */,
 				B72265C01B5376D8006292A5 /* KnockoutViewController.swift */,
+				B72C8ACD1B54BB3600911775 /* KnockoutTableViewCell.swift */,
 			);
 			path = Fut5;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				B7E16E7A1B30E43400717CCD /* UIViewController+MMDrawerController.m in Sources */,
 				B78E209C1B421F7500FD8E39 /* User.swift in Sources */,
 				B72265BD1B534C43006292A5 /* MenuItemTableViewCell.swift in Sources */,
+				B72C8ACE1B54BB3600911775 /* KnockoutTableViewCell.swift in Sources */,
 				B78E209A1B42168200FD8E39 /* NetworkAdapter.swift in Sources */,
 				B72265BF1B53509C006292A5 /* MenuItem.swift in Sources */,
 				B7E56CE41B26754500DBE055 /* AppDelegate.swift in Sources */,

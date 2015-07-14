@@ -69,7 +69,7 @@ class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableVi
             var menuItem1 : MenuItem = MenuItem(_menuItemLabelName: "Bookings", _menuImageName: "SideMenu__0011_Shape-137");
             var menuItem2 : MenuItem = MenuItem(_menuItemLabelName: "Knockout list", _menuImageName: "SideMenu__0010_Shape-101");
             var menuItem3 : MenuItem = MenuItem(_menuItemLabelName: "Settings", _menuImageName: "SideMenu__0009_Shape-15");
-            var menuItem4 : MenuItem = MenuItem(_menuItemLabelName: "Log out", _menuImageName: "SideMenu__0008_Shape-434");
+            var menuItem4 : MenuItem = MenuItem(_menuItemLabelName: "Home / Log out", _menuImageName: "SideMenu__0008_Shape-434");
             
             self.menuItems.append(menuItem1);
             self.menuItems.append(menuItem2);

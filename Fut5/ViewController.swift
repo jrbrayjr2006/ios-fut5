@@ -91,6 +91,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
     }
     
+    @IBAction func openMyBookingFromNavBarOnTouchUp(sender: UIBarButtonItem) {
+        var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+        var centerNavController = UINavigationController(rootViewController: centerViewController);
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        
+        appDelegate.bookingContainer!.centerViewController = centerNavController;
+    }
     
     // Generate the times to be displayed in the booking listing
     func generateTimes() -> [String] {
