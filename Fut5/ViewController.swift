@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // create each cell for the table
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "bookingTimeCell";
-        var cell = self.BookingTimesTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as BookingTimeTableViewCell;
+        var cell = self.BookingTimesTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! BookingTimeTableViewCell;
         //cell.textLabel?.text = self.items[indexPath.row]
         NSLog("The time is : %@", self.items[indexPath.row]);
         cell.bookingTimeLabel.text = self.items[indexPath.row];
@@ -87,14 +87,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Open the left navigation drawer
     @IBAction func leftDrawerOnTouchUp(sender: UIBarButtonItem) {
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
     }
     
     @IBAction func openMyBookingFromNavBarOnTouchUp(sender: UIBarButtonItem) {
-        var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+        var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as! MyBookingsViewController;
         var centerNavController = UINavigationController(rootViewController: centerViewController);
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         
         appDelegate.bookingContainer!.centerViewController = centerNavController;
     }
@@ -108,7 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func displayAlertMessage(userMessage:String) {
         var myMessage = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert);
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, nil);
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil);
         
         myMessage.addAction(okAction);
         
@@ -120,18 +120,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let oneHourAction = UIAlertAction(title: "1 Hour", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
             //self.performSegueWithIdentifier("fromBookingsToMyBookings", sender: self);
-            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as! MyBookingsViewController;
             var centerNavController = UINavigationController(rootViewController: centerViewController);
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
             
             appDelegate.bookingContainer!.centerViewController = centerNavController;
             //appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
         });
         let twoHourAction = UIAlertAction(title: "2 Hours", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) in
             //self.performSegueWithIdentifier("fromBookingsToMyBookings", sender: self);
-            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as! MyBookingsViewController;
             var centerNavController = UINavigationController(rootViewController: centerViewController);
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
             
             appDelegate.bookingContainer!.centerViewController = centerNavController;
         });

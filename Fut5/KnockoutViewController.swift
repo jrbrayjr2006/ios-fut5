@@ -39,7 +39,7 @@ class KnockoutViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func leftDrawerNavOnTouchUp(sender: AnyObject) {
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
     }
     
@@ -49,7 +49,7 @@ class KnockoutViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cellIdentifier : String = "KnockoutTableViewCell";
-        var cell : KnockoutTableViewCell  = self.knockoutTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as KnockoutTableViewCell;
+        var cell : KnockoutTableViewCell  = self.knockoutTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! KnockoutTableViewCell;
         
         cell.playerNameLabel.text = playerNames[indexPath.row];
         cell.backgroundColor = UIColor.clearColor();

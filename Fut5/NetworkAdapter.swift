@@ -21,7 +21,7 @@ class NetworkAdapter: NSObject {
     var data : NSMutableData = NSMutableData();
     
     init(serviceUrl : NSString) {
-        self.serviceUrl = serviceUrl;
+        self.serviceUrl = serviceUrl as String;
     }
     
     
@@ -42,7 +42,7 @@ class NetworkAdapter: NSObject {
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url);
         request.HTTPMethod = "POST";
         request.HTTPBody = postData;
-        request.setValue(postLength, forHTTPHeaderField: "Content-Length");
+        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length");
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type");
         request.setValue("application/json", forHTTPHeaderField: "Accept");
         
@@ -57,7 +57,7 @@ class NetworkAdapter: NSObject {
             NSLog("Data returned!");
         }
         
-        let res = response as NSHTTPURLResponse!;
+        let res = response as! NSHTTPURLResponse!;
         
         NSLog("Response code: %ld", res.statusCode);
         
@@ -74,12 +74,12 @@ class NetworkAdapter: NSObject {
             
             var error: NSError?
             
-            let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
+            let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as! NSDictionary
             
-            let mstatus:NSInteger = jsonData.valueForKey("status") as NSInteger;
-            let success:NSString = jsonData.valueForKey("status_message") as NSString;
+            let mstatus:NSInteger = jsonData.valueForKey("status") as! NSInteger;
+            let success:NSString = jsonData.valueForKey("status_message") as! NSString;
             
-            let data:NSArray = jsonData.valueForKey("data") as NSArray;
+            let data:NSArray = jsonData.valueForKey("data") as! NSArray;
             
             NSLog("Success: %ld", mstatus);
             
@@ -93,31 +93,31 @@ class NetworkAdapter: NSObject {
                 prefs.synchronize()
                 
                 // Get the data into a NSDictionary object
-                let userData : NSDictionary = data[0] as NSDictionary;
+                let userData : NSDictionary = data[0] as! NSDictionary;
                 
                 // Get the values of the dictionary elements
-                NSLog("The first data element is %@", userData["firstname"] as NSString);
+                NSLog("The first data element is %@", userData["firstname"] as! NSString);
                 
                 NSLog("Login Data %@", data);
                 
                 var user : User = User.sharedInstance;
                 user.username = username;
-                user.firstname = userData["firstname"] as NSString;
-                user.lastname = userData["lastname"] as NSString;
-                user.id = userData["id"] as NSString;
+                user.firstname = userData["firstname"] as! NSString as String;
+                user.lastname = userData["lastname"] as! NSString as String;
+                user.id = userData["id"] as! NSString as String;
                 
                 //self.dismissViewControllerAnimated(true, completion: nil)
             } else {
                 var error_msg:NSString
                 
                 if jsonData["status_message"] as? NSString != nil {
-                    error_msg = jsonData["status_message"] as NSString
+                    error_msg = jsonData["status_message"] as! NSString
                 } else {
                     error_msg = "Unknown Error"
                 }
                 var alertView:UIAlertView = UIAlertView()
                 alertView.title = "Sign in Failed!"
-                alertView.message = error_msg
+                alertView.message = error_msg as String
                 alertView.delegate = self
                 alertView.addButtonWithTitle("OK")
                 alertView.show()
@@ -156,7 +156,7 @@ class NetworkAdapter: NSObject {
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url);
         request.HTTPMethod = "POST";
         request.HTTPBody = postData;
-        request.setValue(postLength, forHTTPHeaderField: "Content-Length");
+        request.setValue(postLength as String, forHTTPHeaderField: "Content-Length");
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type");
         request.setValue("application/json", forHTTPHeaderField: "Accept");
         
@@ -171,7 +171,7 @@ class NetworkAdapter: NSObject {
             NSLog("Data returned!");
         }
         
-        let res = response as NSHTTPURLResponse!;
+        let res = response as! NSHTTPURLResponse!;
         
         NSLog("Response code: %ld", res.statusCode);
         
@@ -185,12 +185,12 @@ class NetworkAdapter: NSObject {
             
             var error: NSError?
             
-            let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as NSDictionary
+            let jsonData:NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as! NSDictionary
             
-            let mstatus:NSInteger = jsonData.valueForKey("status") as NSInteger;
-            let success:NSString = jsonData.valueForKey("status_message") as NSString;
+            let mstatus:NSInteger = jsonData.valueForKey("status") as! NSInteger;
+            let success:NSString = jsonData.valueForKey("status_message") as! NSString;
             
-            data = jsonData.valueForKey("data") as NSArray;
+            data = jsonData.valueForKey("data") as! NSArray;
             
             NSLog("Success: %ld", mstatus);
             
@@ -200,15 +200,15 @@ class NetworkAdapter: NSObject {
                 var numberOfBookings : Int = data.count;
                 
                 for rawBooking in data {
-                    var tmpBookingDictionary : NSDictionary = rawBooking as NSDictionary;
+                    var tmpBookingDictionary : NSDictionary = rawBooking as! NSDictionary;
                     var tmpBooking : Booking = Booking();
                     
                     tmpBooking.userId = id.toInt();
-                    var tmpId : String = (tmpBookingDictionary["duration"] as String);
+                    var tmpId : String = (tmpBookingDictionary["duration"] as! String);
                     tmpBooking.duration = tmpId.toInt();
-                    tmpBooking.bookingStartTime = (tmpBookingDictionary["timeslot"] as String);
-                    tmpBooking.soccerFieldName = (tmpBookingDictionary["name"] as String);
-                    var soccerIdString : String = (tmpBookingDictionary["soccer_id"] as String);
+                    tmpBooking.bookingStartTime = (tmpBookingDictionary["timeslot"] as! String);
+                    tmpBooking.soccerFieldName = (tmpBookingDictionary["name"] as! String);
+                    var soccerIdString : String = (tmpBookingDictionary["soccer_id"] as! String);
                     tmpBooking.soccerFieldId = soccerIdString.toInt();
                     //TODO still working on following values
                     tmpBooking.bookingEndTime = "tbd";
@@ -223,13 +223,13 @@ class NetworkAdapter: NSObject {
                 var error_msg:NSString
                 
                 if jsonData["status_message"] as? NSString != nil {
-                    error_msg = jsonData["status_message"] as NSString;
+                    error_msg = jsonData["status_message"] as! NSString;
                 } else {
                     error_msg = "Unknown Error";
                 }
                 var alertView:UIAlertView = UIAlertView();
                 alertView.title = "No Data Retrieved!";
-                alertView.message = error_msg;
+                alertView.message = error_msg as String;
                 alertView.delegate = self;
                 alertView.addButtonWithTitle("OK");
                 alertView.show();

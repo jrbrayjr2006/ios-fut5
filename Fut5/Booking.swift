@@ -17,7 +17,7 @@ class Booking: NSObject {
     var soccerFieldId : Int?
     var bookingTime : String?
     var bookingDate : String?;
-    var time : TimeValue?;
+    var time : String?;
     var soccerFieldName : String?;
     var bookingStartTime : String?
     var bookingEndTime : String?

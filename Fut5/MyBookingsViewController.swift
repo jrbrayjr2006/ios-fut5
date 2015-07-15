@@ -50,7 +50,7 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "myBookingCell";
-        var cell : MyBookingTableViewCell = self.myBookingsUITableView.dequeueReusableCellWithIdentifier(cellIdentifier) as MyBookingTableViewCell;
+        var cell : MyBookingTableViewCell = self.myBookingsUITableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MyBookingTableViewCell;
         
         let startTime : String = myBookings[indexPath.row].bookingStartTime!;
         let endTime : String = myBookings[indexPath.row].bookingEndTime!;
@@ -90,7 +90,7 @@ class MyBookingsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
 
     @IBAction func leftNavigationButtonTouchUp(sender: UIBarButtonItem) {
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
         appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
     }
 }

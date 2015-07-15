@@ -84,7 +84,7 @@ class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier : String = "MenuItemCell";
-        var cell : MenuItemTableViewCell = self.leftDrawerMenuTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as MenuItemTableViewCell;
+        var cell : MenuItemTableViewCell = self.leftDrawerMenuTableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MenuItemTableViewCell;
         
         //NSLog("The menu item is : %@", self.menuItems[indexPath.row]);
         let itemName : String = menuItems[indexPath.row].menuItemLabelName!;
@@ -100,17 +100,17 @@ class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch(indexPath.row) {
         case 0:
-            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController;
+            var centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MyBookingsViewController") as! MyBookingsViewController;
             var centerNavController = UINavigationController(rootViewController: centerViewController);
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
             
             appDelegate.bookingContainer!.centerViewController = centerNavController;
             appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
             break;
         case 1:
-            var knockoutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("KnockoutViewController") as KnockoutViewController;
+            var knockoutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("KnockoutViewController") as! KnockoutViewController;
             var knockoutNavController = UINavigationController(rootViewController: knockoutViewController);
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
             
             appDelegate.bookingContainer!.centerViewController = knockoutNavController;
             appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);
@@ -119,9 +119,9 @@ class LeftDrawerViewController: UIViewController, UITableViewDelegate, UITableVi
             println("Feature not implemented yet...");
             break;
         case 3:
-            var bookingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController;
+            var bookingViewController = self.storyboard?.instantiateViewControllerWithIdentifier("BookingViewController") as! ViewController;
             var bookingNavController = UINavigationController(rootViewController: bookingViewController);
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate;
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate;
             
             appDelegate.bookingContainer!.centerViewController = bookingNavController;
             appDelegate.bookingContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil);

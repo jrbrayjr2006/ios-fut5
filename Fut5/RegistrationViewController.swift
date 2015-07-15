@@ -71,7 +71,7 @@ class RegistrationViewController: UIViewController {
     func displayAlertMessage(userMessage:String) {
         var myMessage = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert);
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, nil);
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil);
         
         myMessage.addAction(okAction);
         

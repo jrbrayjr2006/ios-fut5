@@ -23,8 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootViewController = self.window!.rootViewController
         var mainStoryBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        var bookingViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("BookingViewController") as ViewController
-        var leftDrawerViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftDrawerViewController") as LeftDrawerViewController
+        var bookingViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("BookingViewController") as! ViewController
+        var leftDrawerViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("LeftDrawerViewController") as! LeftDrawerViewController
         
         //var myBookingsViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("MyBookingsViewController") as MyBookingsViewController
         
